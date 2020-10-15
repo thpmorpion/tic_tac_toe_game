@@ -22,11 +22,10 @@ class Game
             puts "Au tour de #{element.name}"
             my_board.turn
             my_board.replace_cases(element.symbol)
-            while my_board.case_not_empty == "f"
+            while my_board.case_not_empty == true
                 puts "Gros la case est déjà prise !"
                 my_board.turn
                 my_board.replace_cases(element.symbol)
-                my_board.case_not_empty = "ok"
             end
             the_show = Show.new(my_board.array_of_cases)
             @status = my_board.winning

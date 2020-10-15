@@ -22,14 +22,14 @@ class Board
     def replace_cases(symbol)
       if @array_of_cases[@case_choice].nil?
         @array_of_cases[@case_choice] = symbol
-        @case_not_empty = "ok"
+        @case_not_empty = false
         if symbol == "x"
           @array_by_symbol_x << @case_choice
         elsif symbol == "o"
           @array_by_symbol_o << @case_choice
         end
       else 
-        @case_not_empty = "f"
+        @case_not_empty = true
         return @case_not_empty
       end
     end

@@ -50,9 +50,9 @@ class Board
         [ 2, 4, 6 ],
       ]; 
       array_of_winnings.each do |element|
-        if element == @array_by_symbol_x
+        if (element - @array_by_symbol_x).empty?
           @p_win = "p1"
-        elsif element == @array_by_symbol_o
+        elsif (element - @array_by_symbol_o).empty?
           @p_win = "p2"
         end
       end
